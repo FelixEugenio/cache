@@ -1,0 +1,15 @@
+{
+  "name": "cache",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/FelixEugenio/cache.git",
+  "author": "felix eugenio mavila <felixmacarenco@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

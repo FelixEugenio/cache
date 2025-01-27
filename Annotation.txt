@@ -1,1 +1,32 @@
 // Sistema de cache com NodeJs e Express e typescript
+
+// Oque é uma cache ?
+R: 
+
+// Porque que precisamos de Cache no Backend 
+R: Usamos cache no backend para melhorar o desempenho, reduzir a carga no servidor e oferecer uma experiência mais rápida ao utilizador. Aqui estão as razões principais:
+
+1. Reduzir Latência
+Consultas repetidas a bases de dados ou APIs externas podem ser lentas. Com o cache, os dados frequentemente acessados são armazenados na memória (ex.: Redis, Memcached), permitindo acessos muito mais rápidos.
+2. Diminuir a Carga no Servidor
+Quando muitos utilizadores realizam as mesmas requisições, o backend pode ficar sobrecarregado. Com cache, eliminamos a necessidade de processar repetidamente a mesma lógica ou consulta.
+3. Reduzir Custos
+Menos acessos a bases de dados ou APIs externas (que podem cobrar por consulta) significa economia em termos de recursos e custos financeiros.
+4. Melhorar a Escalabilidade
+Sistemas com cache conseguem lidar melhor com picos de tráfego porque evitam que os recursos mais caros do sistema fiquem sobrecarregados.
+5. Garantir Disponibilidade
+Em caso de falhas na base de dados ou na API externa, o cache pode continuar a servir dados armazenados recentemente, garantindo que o sistema continue operacional (mesmo que de forma limitada).
+6. Exemplos Práticos de Uso
+Autenticação: Cachear tokens de autenticação para verificações rápidas.
+Configurações de Sistema: Dados que raramente mudam, como configurações globais.
+Resultados de Consultas Complexas: Relatórios ou cálculos pesados.
+APIs Externas: Cachear respostas para reduzir chamadas frequentes.
+7. Estratégias de Cache
+Cache na Memória: Armazena dados diretamente na RAM, rápido, mas volátil.
+Cache Persistente: Armazena dados em sistemas como Redis ou Memcached, mais durável e escalável.
+Cache Distribuído: Usado em sistemas grandes, onde várias máquinas compartilham o mesmo cache.
+8. Cuidados ao Usar Cache
+Dados Desatualizados: Implementar políticas de expiração ou invalidação.
+Sincronização: Quando múltiplas instâncias de backend estão envolvidas.
+Consistência: Garantir que o cache não sirva dados incorretos ou obsoletos.
+Usar cache de maneira inteligente é uma das formas mais eficazes de otimizar o desempenho de aplicações backend, como o Mavila-Express que você está desenvolvendo.

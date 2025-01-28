@@ -1,0 +1,35 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    depends_on:
+      - redis
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/usr/app
+    environment:
+      NODE_ENV: "development"
+      PORT: "3000"
+      REDIS_HOST: "redis"
+      REDIS_PORT: "6379"
+      REDIS_PASSWORD: "bitnami"
+    networks:
+      - app_network
+
+  redis:
+    image: bitnami/redis:latest
+    ports:
+      - "6379:6379"
+    environment:
+      REDIS_PASSWORD: "bitnami"
+    volumes:
+      - redis_data:/bitnami/redis
+    networks:
+      - app_network
+
+volumes:
+  redis_data:
+
+networks:
+  app_network:

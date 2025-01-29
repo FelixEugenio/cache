@@ -6,7 +6,7 @@
     "dev": "ts-node-dev --respawn --transpile-only ./src/app.ts",
     "build": "tsc"
   },
-  "prisma":{
+  "prisma": {
     "seed": "ts-node prisma/seed.ts"
   },
   "repository": "https://github.com/FelixEugenio/cache.git",
@@ -21,6 +21,7 @@
     "@faker-js/faker": "^9.4.0",
     "@prisma/client": "^6.2.1",
     "express": "^4.21.2",
+    "ioredis": "^5.4.2",
     "prisma": "^6.2.1"
   }
 }

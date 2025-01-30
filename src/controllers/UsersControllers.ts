@@ -13,7 +13,7 @@ export default class UserController{
          console.time('find Users')
          if(cachedUsers){ 
             console.timeEnd('find Users')
-            // termina o calculo do tempo 
+         
             return res.json(JSON.parse(cachedUsers))  
          }
 

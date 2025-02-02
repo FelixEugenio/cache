@@ -5,6 +5,7 @@ import redis from "../lib/cache";
 const prisma = new PrismaClient();
 export default class UserController{
   
+  //comentario
     static async find(req:Request, res:Response){
         try{
          const cacheKey = 'users:all';
@@ -17,8 +18,7 @@ export default class UserController{
          
             return res.json(JSON.parse(cachedUsers))  
          }
-
-            
+  
            const users = await prisma.user.findMany();
            console.timeEnd('find Users')
 

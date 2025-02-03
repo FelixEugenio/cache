@@ -5,7 +5,7 @@ import redis from "../lib/cache";
 const prisma = new PrismaClient();
 export default class UserController{
   
-  //comentario
+  
     static async find(req:Request, res:Response){
         try{
          const cacheKey = 'users:all';

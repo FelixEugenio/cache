@@ -5,6 +5,7 @@ import redis from "../lib/cache";
 const prisma = new PrismaClient();
 export default class UserController{
   
+  //passei aqui
   
     static async find(req:Request, res:Response){
         try{
